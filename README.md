@@ -2,6 +2,16 @@
 # ioBroker Seasons adapter based on homebridge-template
 =================
 
+## Template homebridge plugin adapter
+
+After the renaming from [this](https://github.com/ioBroker/ioBroker.template#steps) is executed,
+you can update package.json with "dependencies" write valid name and version of homebridge module.
+
+And then extend the config for homebridge in io-package.json at "wrapperConfig".
+
+Last step is to write valid index_m.html for this driver.
+
+## Description
 This adapter is based on homebridge-template plugin.
 
 ![States](img/objects.png)
