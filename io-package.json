@@ -1,0 +1,67 @@
+{
+    "common": {
+        "name": "ham-template",
+        "version": "0.1.0",
+        "news": {
+            "0.1.0": {
+                "en": "initial adapter",
+                "de": "Initiale Version",
+                "ru": "Первоначальный адаптер",
+                "pt": "Versão inicial",
+                "fr": "Version initiale",
+                "nl": "Eerste release"
+            }
+        },
+        "title": "Template plugin",
+        "titleLang": {
+            "en": "Template plugin",
+            "de": "Template plugin",
+            "ru": "Template plugin",
+            "pt": "Template plugin",
+            "nl": "Template plugin",
+            "fr": "Template plugin",
+            "it": "Template plugin",
+            "es": "Template plugin"
+        },
+        "desc": {
+            "en": "ioBroker Homebridge Adapter",
+            "de": "ioBroker Homebridge Adapter",
+            "ru": "ioBroker Homebridge драйвер",
+            "pt": "Modelo de Homebridge para o ioBroker",
+            "fr": "ioBroker Homebridge modèle",
+            "nl": "ioBroker Homebridge Adapter",
+            "it": "Adattatore Homebridge ioBroker",
+            "es": "Adaptador Homebridge ioBroker"
+        },
+        "authors": [
+            "@@Author@@ <@@email@@>"
+        ],
+        "platform": "Javascript/Node.js",
+        "mode": "daemon",
+        "icon": "ham-template.png",
+        "materialize": true,
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham-template/master/admin/ham-template.png",
+        "keywords": ["homebridge", "template"],
+        "readme": "https://github.com/ioBroker/ioBroker.ham-template/blob/master/README.md",
+        "loglevel": "info",
+        "type": "general"
+    },
+    "native": {
+        "ignoreAccessories": true,
+        "wrapperConfig": {
+            "description": "This is a configuration file for homebridge.",
+            "accessories": [
+            ],
+            "platforms": [
+                {
+                    "platform": "Seasons",
+                    "name": "Seasons",
+                    "calendar": "meteorologic",
+                    "hemisphere": "north",
+                    "display": "both"
+                }
+            ]
+        }
+    }
+}

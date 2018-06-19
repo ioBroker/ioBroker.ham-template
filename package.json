@@ -1,0 +1,44 @@
+{
+    "version": "0.1.0",
+    "name": "iobroker.ham-template",
+    "author": {
+        "name": "@@Author@@",
+        "email": "@@email@@"
+    },
+    "bugs": {
+        "url": "https://github.com/ioBroker/ioBroker.ham-template/issues"
+    },
+    "contributors": [
+        {
+            "name": "@@Author@@",
+            "email": "@@email@@"
+        }
+    ],
+    "dependencies": {
+        "iobroker.ham": "^0.3.0",
+        "homebridge-template": "^actual version"
+    },
+    "description": "Homebridge accessories manager",
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "gulp": "^3.9.1",
+        "mocha": "^5.2.0"
+    },
+    "homepage": "https://github.com/ioBroker/ioBroker.ham-template",
+    "keywords": [
+        "ioBroker",
+        "Homebridge",
+        "Smart Home",
+        "home automation"
+    ],
+    "license": "MIT",
+    "main": "main.js",
+    "readmeFilename": "README.md",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ioBroker/ioBroker.ham-template.git"
+    },
+    "scripts": {
+        "test": "node node_modules/mocha/bin/mocha --exit"
+    }
+}
