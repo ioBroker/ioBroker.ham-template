@@ -402,4 +402,113 @@ gulp.task('updateReadme', done => {
     done();
 });
 
+function padding(num) {
+    return (num < 10) ? '0' + num : num;
+}
+
+gulp.task('rename', function ()  {
+    let newname;
+    let author = '@@Author@@';
+    let email  = '@@email@@';
+    for (let a = 0; a < process.argv.length; a++) {
+        if (process.argv[a] === '--name') {
+            newname = process.argv[a + 1]
+        } else if (process.argv[a] === '--email') {
+            email = process.argv[a + 1]
+        } else if (process.argv[a] === '--author') {
+            author = process.argv[a + 1]
+        }
+    }
+
+
+    console.log('Try to rename to "' + newname + '"');
+    if (!newname) {
+        console.log('Please write the new template name, like: "gulp rename --name mywidgetset" --author "Author Name"');
+        process.exit();
+    }
+    if (newname.indexOf(' ') !== -1) {
+        console.log('Name may not have space in it.');
+        process.exit();
+    }
+    if (newname.toLowerCase() !== newname) {
+        console.log('Name must be lower case.');
+        process.exit();
+    }
+    if (fs.existsSync(__dirname + '/admin/ham-template.png')) {
+        fs.renameSync(__dirname + '/admin/ham-template.png',              __dirname + '/admin/ham-' + newname + '.png');
+    }
+    if (fs.existsSync(__dirname + '/widgets/ham-template.html')) {
+        fs.renameSync(__dirname + '/widgets/ham-template.html',           __dirname + '/widgets/ham-' + newname + '.html');
+    }
+    if (fs.existsSync(__dirname + '/widgets/ham-template/js/ham-template.js')) {
+        if (!fs.existsSync(__dirname + '/widgets/ham-' + newname + '/')) {
+            fs.mkdirSync(__dirname + '/widgets/ham-' + newname + '/');
+        }
+        if (!fs.existsSync(__dirname + '/widgets/ham-' + newname + '/js/')) {
+            fs.mkdirSync(__dirname + '/widgets/ham-' + newname + '/js/');
+        }
+        fs.renameSync(__dirname + '/widgets/ham-template/js/ham-template.js', __dirname + '/widgets/ham-' + newname + '/js/ham-' + newname + '.js');
+    }
+    if (fs.existsSync(__dirname + '/widgets/ham-template')) {
+        fs.renameSync(__dirname + '/widgets/ham-template',                __dirname + '/widgets/ham-' + newname);
+    }
+
+    const now = new Date();
+    let date = now.getFullYear() + '-' + padding(now.getMonth() + 1) + '-' + padding(now.getDate());
+
+    const patterns = [
+        {
+            match: /ioBroker template Adapter/g,
+            replacement: newname
+        },
+        {
+            match: /template/g,
+            replacement: newname
+        },
+        {
+            match: /Template/g,
+            replacement: newname ? (newname[0].toUpperCase() + newname.substring(1)) : 'Template'
+        },
+        {
+            match: /@@Author@@/g,
+            replacement: author
+        },
+        {
+            match: /@@email@@/g,
+            replacement: email
+        },
+        {
+            match: /@@date@@/g,
+            replacement: date
+        }
+    ];
+    const files = [
+        __dirname + '/io-package.json',
+        __dirname + '/LICENSE',
+        __dirname + '/package.json',
+        __dirname + '/README.md',
+        __dirname + '/main.js',
+        __dirname + '/gulpfile.js',
+        __dirname + '/widgets/' + newname +'.html',
+        __dirname + '/www/index.html',
+        __dirname + '/admin/index.html',
+        __dirname + '/admin/index_m.html',
+        __dirname + '/widgets/' + newname + '/js/' + newname +'.js',
+        __dirname + '/widgets/' + newname + '/css/style.css'
+    ];
+    files.forEach((f) => {
+        try {
+            if (fs.existsSync(f)) {
+                let data = fs.readFileSync(f).toString('utf-8');
+                for (let r = 0; r < patterns.length; r++) {
+                    data = data.replace(patterns[r].match, patterns[r].replacement);
+                }
+                fs.writeFileSync(f, data);
+            }
+        } catch (e) {
+
+        }
+    });
+});
+
 gulp.task('default', ['updatePackages', 'updateReadme']);
