@@ -1,5 +1,5 @@
 ![Logo](admin/ham-template.png)
-# ioBroker Seasons adapter based on homebridge-template
+# ioBroker Template adapter based on homebridge-template
 =================
 
 ## Template homebridge plugin adapter
