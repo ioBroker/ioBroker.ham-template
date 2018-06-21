@@ -18,7 +18,7 @@
         "iobroker.ham": "^0.3.0",
         "homebridge-weather": "^1.9.0"
     },
-    "description": "Homebridge accessories manager",
+    "description": "Homebridge accessories manager Plugin",
     "devDependencies": {
         "chai": "^4.1.2",
         "gulp": "^3.9.1",

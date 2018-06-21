@@ -24,14 +24,14 @@
             "es": "Template plugin"
         },
         "desc": {
-            "en": "ioBroker Homebridge Adapter",
-            "de": "ioBroker Homebridge Adapter",
-            "ru": "ioBroker Homebridge драйвер",
-            "pt": "Modelo de Homebridge para o ioBroker",
-            "fr": "ioBroker Homebridge modèle",
-            "nl": "ioBroker Homebridge Adapter",
-            "it": "Adattatore Homebridge ioBroker",
-            "es": "Adaptador Homebridge ioBroker"
+            "en": "ioBroker Homebridge Adapter Plugin",
+            "de": "ioBroker Homebridge Adapter Plugin",
+            "ru": "ioBroker Homebridge драйвер Plugin",
+            "pt": "Modelo de Homebridge para o ioBroker Plugin",
+            "fr": "ioBroker Homebridge modèle Plugin",
+            "nl": "ioBroker Homebridge Adapter Plugin",
+            "it": "Adattatore Homebridge ioBroker Plugin",
+            "es": "Adaptador Homebridge ioBroker Plugin"
         },
         "authors": [
             "@@Author@@ <@@email@@>"
@@ -49,8 +49,8 @@
     },
     "native": {
         "ignoreInfoAccessoryServices": true,
+        "characteristicPollingInterval": 0,
         "wrapperConfig": {
-            "description": "This is a configuration file for homebridge.",
             "accessories": [
             ],
             "platforms": [
