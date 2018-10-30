@@ -1,5 +1,8 @@
 ![Logo](admin/ham-template.png)
 # ioBroker Template adapter based on homebridge-template
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ioBroker/ioBroker.ham-template.svg)](https://greenkeeper.io/)
+
 =================
 
 ## Template homebridge plugin adapter
