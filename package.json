@@ -1,44 +1,45 @@
 {
-    "version": "0.1.0",
-    "name": "iobroker.ham-template",
-    "author": {
-        "name": "@@Author@@",
-        "email": "@@email@@"
-    },
-    "bugs": {
-        "url": "https://github.com/ioBroker/ioBroker.ham-template/issues"
-    },
-    "contributors": [
-        {
-            "name": "@@Author@@",
-            "email": "@@email@@"
-        }
-    ],
-    "dependencies": {
-        "iobroker.ham": "^1.0.0",
-        "homebridge-weather": "^1.9.0"
-    },
-    "description": "Homebridge accessories manager Plugin",
-    "devDependencies": {
-        "chai": "^4.1.2",
-        "gulp": "^3.9.1",
-        "mocha": "^5.2.0"
-    },
-    "homepage": "https://github.com/ioBroker/ioBroker.ham-template",
-    "keywords": [
-        "ioBroker",
-        "Homebridge",
-        "Smart Home",
-        "home automation"
-    ],
-    "license": "MIT",
-    "main": "main.js",
-    "readmeFilename": "README.md",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ioBroker/ioBroker.ham-template.git"
-    },
-    "scripts": {
-        "test": "node node_modules/mocha/bin/mocha --exit"
+  "version": "0.1.0",
+  "name": "iobroker.ham-template",
+  "author": {
+    "name": "@@Author@@",
+    "email": "@@email@@"
+  },
+  "bugs": {
+    "url": "https://github.com/ioBroker/ioBroker.ham-template/issues"
+  },
+  "contributors": [
+    {
+      "name": "@@Author@@",
+      "email": "@@email@@"
     }
+  ],
+  "dependencies": {
+    "iobroker.ham": "^1.0.0",
+    "homebridge-weather": "^1.9.0"
+  },
+  "description": "Homebridge accessories manager Plugin",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "gulp": "^3.9.1",
+    "mocha": "^6.0.2",
+    "@iobroker/adapter-core": "^1.0.3"
+  },
+  "homepage": "https://github.com/ioBroker/ioBroker.ham-template",
+  "keywords": [
+    "ioBroker",
+    "Homebridge",
+    "Smart Home",
+    "home automation"
+  ],
+  "license": "MIT",
+  "main": "main.js",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioBroker/ioBroker.ham-template.git"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --exit"
+  }
 }
