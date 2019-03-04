@@ -16,14 +16,14 @@
   ],
   "dependencies": {
     "iobroker.ham": "^1.0.0",
-    "homebridge-weather": "^1.9.0"
+    "homebridge-weather": "^1.9.0",
+    "@iobroker/adapter-core": "^1.0.3"
   },
   "description": "Homebridge accessories manager Plugin",
   "devDependencies": {
     "chai": "^4.1.2",
     "gulp": "^3.9.1",
-    "mocha": "^6.0.2",
-    "@iobroker/adapter-core": "^1.0.3"
+    "mocha": "^6.0.2"
   },
   "homepage": "https://github.com/ioBroker/ioBroker.ham-template",
   "keywords": [
