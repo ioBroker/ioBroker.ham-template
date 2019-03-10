@@ -1,6 +1,6 @@
 ![Logo](admin/ham-template.png)
 # ioBroker Template adapter based on homebridge-template
-=================
+![Number of Installations](http://iobroker.live/badges/ham-template-installed.svg) ![Number of Installations](http://iobroker.live/badges/ham-template-stable.svg) =================
 
 ## Template homebridge plugin adapter
 
