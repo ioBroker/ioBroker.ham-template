@@ -127,7 +127,7 @@ describe('Test ' + adapterShortName + ' Wrapper adapter', () => {
             states.getState(`${adapterShortName}.0.${namespace}.Accessory-Information.Model`, (err, state) => {
                 expect(err).to.be.null;
                 // only undefined when ignoreInfoAccessoryServices === true, else needs to have a value
-                expect(state).to.be.undefined;
+                expect(state).to.be.null;
                 done();
             });
         });
