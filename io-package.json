@@ -68,7 +68,8 @@
         "keywords": ["homebridge", "template"],
         "readme": "https://github.com/ioBroker/ioBroker.ham-template/blob/master/README.md",
         "loglevel": "info",
-        "type": "general"
+        "type": "general",
+        "license": "TBD",
     },
     "native": {
         "ignoreInfoAccessoryServices": true,
