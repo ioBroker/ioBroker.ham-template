@@ -69,7 +69,12 @@
         "readme": "https://github.com/ioBroker/ioBroker.ham-template/blob/master/README.md",
         "loglevel": "info",
         "type": "general",
-        "license": "TBD"
+        "license": "TBD",
+        "dependencies": [
+            {
+                "js-controller": ">=2.0.0"
+            }
+        ]
     },
     "native": {
         "ignoreInfoAccessoryServices": true,
