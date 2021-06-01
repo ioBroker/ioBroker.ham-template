@@ -15,7 +15,7 @@
     }
   ],
   "dependencies": {
-    "iobroker.ham": "^4.0.1",
+    "iobroker.ham": "^4.0.2",
     "homebridge-weather": "^1.13.0",
     "@iobroker/adapter-core": "^2.4.0"
   },
