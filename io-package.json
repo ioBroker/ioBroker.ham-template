@@ -24,7 +24,8 @@
                 "fr": "Optimisations",
                 "it": "ottimizzazioni",
                 "es": "Optimizaciones",
-                "pl": "Optymalizacje"
+                "pl": "Optymalizacje",
+                "zh-cn": "优化"
             },
             "0.1.0": {
                 "en": "initial adapter",
@@ -32,7 +33,11 @@
                 "ru": "Первоначальный адаптер",
                 "pt": "Versão inicial",
                 "fr": "Version initiale",
-                "nl": "Eerste release"
+                "nl": "Eerste release",
+                "it": "adattatore iniziale",
+                "es": "adaptador inicial",
+                "pl": "początkowy adapter",
+                "zh-cn": "初始适配器"
             }
         },
         "title": "Template plugin",
@@ -44,7 +49,9 @@
             "nl": "Template plugin",
             "fr": "Template plugin",
             "it": "Template plugin",
-            "es": "Template plugin"
+            "es": "Template plugin",
+            "pl": "Wtyczka szablonów",
+            "zh-cn": "模板插件"
         },
         "desc": {
             "en": "ioBroker Homebridge Adapter Plugin",
@@ -54,7 +61,9 @@
             "fr": "ioBroker Homebridge modèle Plugin",
             "nl": "ioBroker Homebridge Adapter Plugin",
             "it": "Adattatore Homebridge ioBroker Plugin",
-            "es": "Adaptador Homebridge ioBroker Plugin"
+            "es": "Adaptador Homebridge ioBroker Plugin",
+            "pl": "Wtyczka adaptera ioBroker Homebridge",
+            "zh-cn": "ioBroker Homebridge 适配器插件"
         },
         "authors": [
             "@@Author@@ <@@email@@>"
@@ -65,7 +74,10 @@
         "materialize": true,
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham-template/master/admin/ham-template.png",
-        "keywords": ["homebridge", "template"],
+        "keywords": [
+            "homebridge",
+            "template"
+        ],
         "readme": "https://github.com/ioBroker/ioBroker.ham-template/blob/master/README.md",
         "loglevel": "info",
         "type": "general",
@@ -75,14 +87,13 @@
                 "js-controller": ">=2.0.0"
             }
         ],
-        "tier": 2""
+        "tier": 2
     },
     "native": {
         "ignoreInfoAccessoryServices": true,
         "characteristicPollingInterval": 0,
         "wrapperConfig": {
-            "accessories": [
-            ],
+            "accessories": [],
             "platforms": [
                 {
                     "platform": "Seasons",
